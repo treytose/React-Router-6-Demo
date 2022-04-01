@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 import Wrapper from './components/layout/Wrapper';
 import Dashboard from './pages/dashboard/Dashboard';
@@ -10,12 +10,11 @@ function App() {
   return (
     <div className="App">      
     <Wrapper>
-      <Routes>
+      <Routes>        
         <Route path="/dashboard" element={<Dashboard/>}/>          
         <Route path="/profile" element={<Profile/>}/>          
-        <Route path="/product/*" element={<Product/>}>
-          
-        </Route>          
+        <Route path="/product/*" element={<Product/>}/>
+        <Route path="*" element={<Navigate to="/dashboard" replace/>}/>
       </Routes>
     </Wrapper>
     </div>
