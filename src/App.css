@@ -1,0 +1,13 @@
+body {  
+  background-color: #282c34;
+  color: white; 
+  padding: 3rem;  
+}
+
+a {
+  color: rgb(245, 245, 245);
+}
+
+a:hover {
+  color: rgb(223, 223, 223);
+}
